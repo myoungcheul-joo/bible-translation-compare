@@ -1,0 +1,10 @@
+{
+  "id": "bible-translation-compare",
+  "name": "Bible Translation Compare",
+  "version": "1.0.0",
+  "minAppVersion": "1.4.0",
+  "description": "Compare a Bible reference at the cursor or in the selection across several translations and insert the chosen ones into your note.",
+  "author": "Myoungcheul Joo",
+  "authorUrl": "https://pkm-institute.netlify.app",
+  "isDesktopOnly": false
+}

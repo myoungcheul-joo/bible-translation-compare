@@ -1,0 +1,176 @@
+/* ── 모달 껍데기: 이동 · 크기조절(오른쪽 아래 모서리) · 접기 ── */
+.btc-modal-shell {
+  width: min(440px, 92vw);
+  height: 82vh;
+  min-width: 300px;
+  min-height: 120px;
+  max-width: 98vw;
+  max-height: 96vh;
+  overflow: auto;
+  resize: both;
+  cursor: move;
+}
+
+.btc-modal-shell.btc-dragging {
+  opacity: 0.92;
+}
+
+/* 접힌 상태: 제목 줄만 남김 */
+.btc-modal-shell.btc-collapsed {
+  height: auto !important;
+  min-height: 0;
+  resize: none;
+  overflow: hidden;
+}
+
+.btc-modal-shell.btc-collapsed .btc-collapsible {
+  display: none;
+}
+
+/* 닫기(X) 버튼이 머리글에 가려지지 않도록 항상 위에 */
+.btc-modal-shell .modal-close-button {
+  z-index: 5;
+  cursor: pointer;
+}
+
+.btc-modal-shell input,
+.btc-modal-shell .btc-block {
+  cursor: auto;
+}
+
+.btc-modal-shell .btc-block.btc-clickable {
+  cursor: pointer;
+}
+
+/* ── 머리글: 스크롤해도 위에 고정 ── */
+.btc-modal .btc-header {
+  position: sticky;
+  top: -16px;
+  z-index: 1;
+  margin: -16px -16px 8px -16px;
+  padding: 16px 16px 8px 16px;
+  background: var(--modal-background, var(--background-primary));
+  user-select: none;
+}
+
+.btc-modal .btc-titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 34px; /* 기본 X 버튼 자리 */
+  margin-bottom: 8px;
+}
+
+.btc-modal .btc-drag-handle {
+  margin: 0;
+  cursor: move;
+}
+
+.btc-modal .btc-tools {
+  display: flex;
+  gap: 4px;
+}
+
+.btc-modal .btc-tool-btn {
+  padding: 2px 8px;
+  height: 26px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.btc-modal .btc-input-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.btc-modal .btc-input-row input {
+  flex: 1;
+  user-select: text;
+  cursor: text;
+}
+
+.btc-modal .btc-ref-title {
+  font-weight: 600;
+  margin: 4px 0 10px 0;
+}
+
+.btc-modal .btc-error {
+  color: var(--text-error);
+}
+
+.btc-modal .btc-block {
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 6px;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+  user-select: text;
+}
+
+.btc-modal .btc-block.btc-clickable {
+  cursor: pointer;
+}
+
+.btc-modal .btc-block.btc-clickable:hover {
+  background: var(--background-modifier-hover);
+}
+
+.btc-modal .btc-label {
+  font-size: 0.8em;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.btc-modal .btc-body {
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+.btc-modal .btc-block.btc-original .btc-body {
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+/* 별도 창(뷰)에서는 음수 여백 없이 */
+.btc-view .btc-header {
+  top: 0;
+  margin: 0 0 8px 0;
+  padding: 0 0 8px 0;
+  background: var(--background-primary);
+}
+.btc-view {
+  overflow: auto;
+}
+
+/* 0.3.0 — 선택 삽입 막대, 번역본 체크박스 */
+.btc-select-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 0;
+}
+.btc-select-bar .btc-preset-select {
+  max-width: 11em;
+}
+.btc-select-bar button.mod-cta {
+  margin-left: auto;
+}
+.btc-label-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.btc-label-row input[type='checkbox'] {
+  margin: 0;
+  cursor: pointer;
+}
+
+/* 0.3.1 — 옵시디언 기본 닫기(✕)는 머리글과 겹쳐 눌리지 않으므로 숨기고, 제목줄의 ✕·Esc로 닫는다 */
+.btc-modal-shell .modal-close-button {
+  display: none;
+}
+.btc-modal .btc-titlebar {
+  padding-right: 0;
+}
