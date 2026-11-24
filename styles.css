@@ -17,7 +17,7 @@
 
 /* 접힌 상태: 제목 줄만 남김 */
 .btc-modal-shell.btc-collapsed {
-  height: auto !important;
+  height: auto;
   min-height: 0;
   resize: none;
   overflow: hidden;
