@@ -492,6 +492,12 @@ class CompareModal extends Modal {
 
   toggleCollapse() {
     const collapsed = this.modalEl.classList.toggle('btc-collapsed');
+    if (collapsed) {
+      this.savedHeight = this.modalEl.style.height;
+      this.modalEl.style.height = '';
+    } else if (this.savedHeight) {
+      this.modalEl.style.height = this.savedHeight;
+    }
     if (this.panel.collapseBtn) this.panel.collapseBtn.setText(collapsed ? '▢' : '―');
   }
 
