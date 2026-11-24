@@ -1,4 +1,25 @@
-# 역본대조 (Bible Translation Compare)
+# Bible Translation Compare
+
+Look up the Bible reference at your cursor or in your selection, compare it across several translations side by side, and insert the ones you choose into your note. Works offline; no network access and no AI.
+
+## Features
+
+- Recognizes Bible references (including Korean book abbreviations) and shows each translation side by side
+- Insert chosen translations as plain text, a quote, or a callout
+- Translation presets and hotkeys
+- Verse numbers and source credit lines when inserting several verses
+
+## Install
+
+Search for "Bible Translation Compare" in Settings → Community plugins, or copy `main.js`, `manifest.json` and `styles.css` from the latest release into `.obsidian/plugins/bible-translation-compare/` in your vault.
+
+This plugin does not ship any Bible text. Place per-book JSON files in your vault (default folder `성경본문/<translation>/<NN><book>.json`) and add the translation in settings. See the Korean section below for the full file layout (folder names, JSON format).
+
+License: all rights reserved. Free to install and use for personal, church and non-profit purposes. Source is viewable but this is not open-source software. See [LICENSE](LICENSE).
+
+---
+
+## 한국어 안내 (역본대조)
 
 옵시디언에서 성경 구절(예: `요 4:14`)에 커서를 두거나 선택하면, 여러 번역본을 나란히 대조해 보고 원하는 번역본만 골라 노트에 한 번에 넣어 주는 플러그인입니다.
 
@@ -33,7 +54,7 @@
 {"book":"창세기","translation":"개역한글","chapters":{"1":{"1":"태초에 하나님이 천지를 창조하시니라"}}}
 ```
 
-- 개역한글판은 대한성서공회 안내에 따라 저작재산권 보호기간이 끝났습니다. 그 밖의 번역본은 저작권자의 이용 조건을 확인한 뒤 본인의 볼트에만 두고 쓰세요.
+- 개역한글판은 대한성서공회 안내에 따라 저작재산권 보호기간이 끝났습니다. 그 밖의 번역본은 저자권자의 이용 조건을 확인한 뒤 본인의 볼트에만 두고 쓰세요.
 - 다른 번역본을 쓰려면 같은 모양으로 폴더를 만든 뒤, 플러그인 설정의 번역본 추가에서 표시 이름과 폴더 이름을 입력하면 됩니다.
 
 ## 설치
@@ -44,13 +65,3 @@
 ## 만든 사람
 
 주명철 · 목회자 PKM 연구소 — https://pkm-institute.netlify.app
-
----
-
-## English
-
-Look up the Bible reference at your cursor or in your selection, compare it across several translations side by side, and insert the ones you choose into your note. Works offline; no network access and no AI.
-
-This plugin does not ship any Bible text. Place per-book JSON files in your vault (default folder `성경본문/<translation>/<NN><book>.json`) and add the translation in settings. See the section above for the file layout.
-
-License: all rights reserved. Free to install and use for personal, church and non-profit purposes. Source is viewable but this is not open-source software. See [LICENSE](LICENSE).
